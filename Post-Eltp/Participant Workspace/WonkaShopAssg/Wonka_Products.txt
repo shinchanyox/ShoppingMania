@@ -1,0 +1,4 @@
+1	Milky Way	12.0	7
+2	Dark Secrets	25.0	4
+3	Swiss Rendezvous	32.0	12
+4	Pulp Fiction	22.0	1
