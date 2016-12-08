@@ -1,0 +1,4 @@
+Product_Name,Brands
+Washing Machine,LG:Samsung:Whirl Pool
+Micro Wave,LG:Samsung
+LED,LG:Samsung:Sony

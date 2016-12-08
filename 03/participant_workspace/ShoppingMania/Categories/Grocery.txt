@@ -1,0 +1,4 @@
+Product_Name,Brands
+Rice,Dawat:Charminar:Kohinoor
+Atta,Ashirwad:PhilsBurry
+Refined Oil,Sweekar:Safola:Gemini
