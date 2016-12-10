@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Empdetails>
+<Employee>
+      <empid>111</empid>
+      <name>Suresh Vaidya</name>
+	  <desg>clerk</desg>
+	  <password>A@123</password>	
+</Employee>
+<Employee>
+      <empid>112</empid>
+      <name>Manisha Patil</name>
+	  <desg>Recruiter</desg>
+	  <password>B@124</password>	
+</Employee>
+<Employee>
+      <empid>113</empid>
+      <name>Sunil Barve</name>
+	  <desg>Accountant</desg>
+	  <password>C@125</password>	
+</Employee>
+</Empdetails>
