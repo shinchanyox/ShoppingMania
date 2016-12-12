@@ -1,0 +1,6 @@
+India:MP-{Bhopal,Indore,Jabalpur} 
+USA:CA-{Los Angeles,San Francisco}
+Australia:Victoria-{Melbourne,Ballarat}
+China:Henan-{Anyang,Nanyang}
+India:Maharashtra-{Nagpur,Pune} 
+India:Maharashtra-{Mumbai,Amravati} 
