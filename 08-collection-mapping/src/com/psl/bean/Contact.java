@@ -1,7 +1,9 @@
 package com.psl.bean;
 
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Contact {
@@ -10,8 +12,9 @@ public class Contact {
 	private String firstname,lastName ;
 	private String email ;
 	private Date dob ;
-	private Address address ;
-	private Set<String> mobileNumbers = new HashSet<String>() ;      
+	private List<Address> addresses = new ArrayList<Address>() ;
+	private Set<String> mobileNumbers = new HashSet<String>() ;    
+	//private Collection<String> mobileNumbers  ; for bag 
 	public int getContactId() {
 		return contactId;
 	}
@@ -59,21 +62,57 @@ public class Contact {
 	}
 	
 	
-	public Contact(String firstname, String lastName, String email, Date dob,
-			Address address) {
+	
+	
+	public Contact(String firstname, String lastName, String email, Date dob) {
 		super();
 		this.firstname = firstname;
 		this.lastName = lastName;
 		this.email = email;
 		this.dob = dob;
-		this.address = address;
 	}
-	public Address getAddress() {
-		return address;
+
+
+
+	public Contact(int contactId, String firstname, String lastName,
+			String email, Date dob) {
+		super();
+		this.contactId = contactId;
+		this.firstname = firstname;
+		this.lastName = lastName;
+		this.email = email;
+		this.dob = dob;
 	}
-	public void setAddress(Address address) {
-		this.address = address;
+
+
+
+	public Contact(int contactId, String firstname, String lastName,
+			String email, Date dob, List<Address> addresses,
+			Set<String> mobileNumbers) {
+		super();
+		this.contactId = contactId;
+		this.firstname = firstname;
+		this.lastName = lastName;
+		this.email = email;
+		this.dob = dob;
+		this.addresses = addresses;
+		this.mobileNumbers = mobileNumbers;
 	}
+
+
+
+	public List<Address> getAddresses() {
+		return addresses;
+	}
+
+
+
+	public void setAddresses(List<Address> addresses) {
+		this.addresses = addresses;
+	}
+
+
+
 	public Contact() {
 		super();
 	}

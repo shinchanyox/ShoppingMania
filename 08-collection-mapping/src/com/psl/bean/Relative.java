@@ -15,14 +15,13 @@ public class Relative extends Contact {
 	}
 
 	public Relative(String firstname, String lastName, String email, Date dob,
-			Address address, String relation) {
-		super(firstname, lastName, email, dob, address);
+			 String relation) {
+		super(firstname, lastName, email, dob);
 		this.relation = relation;
 	}
 
-	public Relative(String firstname, String lastName, String email, Date dob,
-			Address address) {
-		super(firstname, lastName, email, dob, address);
+	public Relative(String firstname, String lastName, String email, Date dob) {
+		super(firstname, lastName, email, dob);
 	}
 	
 

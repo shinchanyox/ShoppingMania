@@ -20,15 +20,34 @@
         <property name="dob" type="java.sql.Date">
             <column name="DOB" />
         </property>
-        <component name="address">
-        	<property name="city" column="CITY"/>
-        	<property name="country" column= "COUNTRY"/>
-        </component>
         
-        <set name="mobileNumbers" table = "CONTACT_MOBILE">
+        
+        <set name="mobileNumbers" table = "CONTACT_MOBILE" order-by ="MOBILE_NUMBER asc">
         <key column = "CONTACT_MOBILE_ID"/>
         <element column = "MOBILE_NUMBER" type ="string"/>
         </set>
         
+        <list name="addresses" table="CONTACT_ADDRESSES">
+        <key column = "CONTACT_ADDRESS_ID"/>
+        <list-index column = "POSITION"/>
+        <composite-element class="com.psl.bean.Address">
+        	<property name="city" column = "CITY"/>
+        	<property name="country" column = "COUNTRY" />
+        	
+        </composite-element>
+        	
+        </list>
+        <!--<list name="">
+        	<key></key>
+        	<list-index column= ""></list-index>
+        	<element></element>
+        </list>-->
+        
+        <!--<map name="">
+        	<key></key>
+        	<map-key type=""></map-key>
+        	<element></element>
+        </map>-->
+                
     </class>
 </hibernate-mapping>

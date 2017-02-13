@@ -7,14 +7,14 @@ public class Friend extends Contact {
 	private String petName  ;
 
 	public Friend(String firstname, String lastName, String email, Date dob,
-			Address address, String petName) {
-		super(firstname, lastName, email, dob, address);
+			 String petName) {
+		super(firstname, lastName, email, dob);
 		this.petName = petName;
 	}
 
-	public Friend(String firstname, String lastName, String email, Date dob,
-			Address address) {
-		super(firstname, lastName, email, dob, address);
+	public Friend(String firstname, String lastName, String email, Date dob
+			) {
+		super(firstname, lastName, email, dob);
 	}
 
 	public String getPetName() {
