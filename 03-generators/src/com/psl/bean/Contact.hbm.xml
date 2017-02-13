@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 30, 2017 2:52:59 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="com.psl.bean.Contact" table="CONTACT">
+        <id name="contactId" type="int">
+            <column name="CONTACTID" default = "0" />
+            <generator class="select" >
+            <param name="key">email</param>
+            </generator>
+        </id> 
+        <property name="firstname" type="java.lang.String">
+            <column name="FIRSTNAME"/>
+        </property>
+        <property name="lastName" type="java.lang.String">
+            <column name="LASTNAME" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" unique="true" />
+        </property>
+        <property name="dob" type="java.sql.Date">
+            <column name="DOB" />
+        </property>
+    </class>
+    
+    <database-object>
+    	<create>
+    		create trigger gen_contact_pk before insert on CONTACT
+    		for each row 
+    		begin
+    			set @max_val =1 ;
+    			select count(CONTACTID) into @max_val from CONTACT  ;
+    			set new.CONTACTID = @max_val+1 ;
+    		end  ; 
+    	</create>
+    	<drop>drop trigger if exists gen_contact_pk</drop>
+    </database-object>
+</hibernate-mapping>
