@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 1, 2017 12:17:38 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="com.psl.bean.User" table="USER">
+        <id name="userID" type="int">
+            <column name="USERID" />
+            <generator class="identity" />
+        </id>
+        <property name="userName" type="java.lang.String">
+            <column name="USERNAME" />
+        </property>
+        
+        <set name="contacts" inverse="true" cascade ="save-update,delete,delete-orphan" >
+            <key>
+                <column name="USERID" />
+            </key>
+            <one-to-many class="com.psl.bean.Contact" />
+        </set>
+    </class>
+</hibernate-mapping>
